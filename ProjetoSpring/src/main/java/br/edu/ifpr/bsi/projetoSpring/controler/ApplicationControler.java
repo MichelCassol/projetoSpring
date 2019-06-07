@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class ApplicationControler {
 	
+	//localhost:8080/application/testar
 	@RequestMapping("/teste")
 	public String teste() {
 		return "Teste do framework Spring Boot com Rest";

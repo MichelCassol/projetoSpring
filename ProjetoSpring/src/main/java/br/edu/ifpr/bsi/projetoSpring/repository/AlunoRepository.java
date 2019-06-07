@@ -1,14 +1,31 @@
 package br.edu.ifpr.bsi.projetoSpring.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.edu.ifpr.bsi.projetoSpring.model.Aluno;
 
+
+//AlunoDAO do Spring
+//Repository = DAO no spring
 public class AlunoRepository {
 	
 	private List<Aluno> alunos;
 
-	public List<Aluno> getAlunos() {
+	public AlunoRepository() {
+		alunos = new ArrayList<Aluno>();
+		
+		alunos.add(new Aluno(1L,"Maria","A1234"));
+		alunos.add(new Aluno(1L,"João","B1234"));
+		
+	}
+	
+	public List<Aluno> listar(){
+		return alunos;
+	}
+	
+	
+	/*public List<Aluno> getAlunos() {
 		return alunos;
 	}
 
@@ -38,5 +55,5 @@ public class AlunoRepository {
 		alunos.add(aluno3);
 		
 		return alunos;
-	}
+	}*/
 }

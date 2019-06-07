@@ -1,10 +1,10 @@
 package br.edu.ifpr.bsi.projetoSpring.model;
 
 public class Aluno {
-	
-	private Long codigo;
+
 	private String nome;
 	private String ra;
+	private Long codigo;
 	
 	public Long getCodigo() {
 		return codigo;
@@ -54,6 +54,13 @@ public class Aluno {
 		} else if (!codigo.equals(other.codigo))
 			return false;
 		return true;
+	}
+	
+	public Aluno(Long codigo, String nome, String ra) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.ra = ra;
 	}
 	
 }
